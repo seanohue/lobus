@@ -96,3 +96,7 @@ Lobus exposes all of the classes it uses internally, in case you want to compose
   .then(() => socket.emit('done'));
 
   ```
+
+  ## Development
+
+  If you would like to contribute to Lobus or develop your own fork of it (and please PR improvements!), please clone this repository. Then, in your local repo, use `npm link` to globally link Lobus. In your Ranvier repository, use `npm link lobus`. After doing this, `require('lobus')` should work and the require statement will pull in the code from your local repository.
