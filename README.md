@@ -24,6 +24,9 @@ Lobus exposes all of the classes it uses internally, in case you want to compose
 ## Example Use
 
   ```javascript
+  const Lobus = require('lobus');
+  const Choices = Lobus.Choices;
+
   let startingAttributes = {
     willpower: 5,
     might: 6
