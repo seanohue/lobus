@@ -27,6 +27,9 @@ Lobus exposes all of the classes it uses internally, in case you want to compose
   const Lobus = require('lobus');
   const Choices = Lobus.Choices;
 
+  // This uses Ranvier's EventUtil class.
+  const say = EventUtil.genSay(socket);
+
   let startingAttributes = {
     willpower: 5,
     might: 6
@@ -86,12 +89,15 @@ Lobus exposes all of the classes it uses internally, in case you want to compose
     });
 
   Choices.run({
-    scenarios: [           // a list of scenarios, ran in the order they are defined
+    // a list of scenarios, ran in the order they are defined
+    scenarios: [
       scenario,
       secondScenario
     ],
-    socket,                // socket to emit input-events to
-    say                   // function to broadcast to socket or player
+    // socket to emit input-events to, see also Ranvier's input-events
+    socket,
+     // function to broadcast to socket or player (or log for testing)
+    say
   })
   .then(() => socket.emit('done'));
 
