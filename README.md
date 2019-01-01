@@ -33,7 +33,10 @@ Lobus exposes all of the classes it uses internally, in case you want to compose
   };
   let startingClass = 'warrior';
 
-  // Choices.createScenario takes a scenario ID and a config with a title and/or description. Scenarios use a chaining API to add choices.
+  // Choices.createScenario takes a scenario ID and
+  // a config with a title and/or description.
+  // It returns a Scenario.
+  // Scenarios use a chaining API to add choices or prerequisites.
   const scenario = Choices
     .createScenario('toughChoice', {
       title: 'Make a tough decision',
