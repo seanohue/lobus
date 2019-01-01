@@ -1,0 +1,25 @@
+{
+  "name": "lobus",
+  "version": "1.0.0",
+  "description": "A Ranvier-compatible input-event library, based on Inquirer and choose-your-own-adventure-style branching.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/seanohue/lobus.git"
+  },
+  "keywords": [
+    "cyoa",
+    "ranvier",
+    "mud",
+    "menus"
+  ],
+  "author": "Sean O'Donohue",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/seanohue/lobus/issues"
+  },
+  "homepage": "https://github.com/seanohue/lobus#readme"
+}
