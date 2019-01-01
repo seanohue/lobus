@@ -21,7 +21,6 @@ Lobus exposes all of the classes it uses internally, in case you want to compose
 - **Choice:**
   Each scenario involves one or more choices that can be made. Each choice made will be recorded in the **Choices** class' state. Developers can specify a prerequisite for a choice to be shown to the user, and can also specify a side effect for any choices that are made.
 
-
 ## Example Use
 
   ```javascript
@@ -54,7 +53,7 @@ Lobus exposes all of the classes it uses internally, in case you want to compose
 
   const secondScenario = Choices
     .createScenario('job', {
-      title: 'Choose a career path'.
+      title: 'Choose a career path',
       description: 'This will have an effect on your character\'s starting skills or whatever.'
     })
     .addChoices({
@@ -85,7 +84,7 @@ Lobus exposes all of the classes it uses internally, in case you want to compose
       scenario,
       secondScenario
     ],
-    socket                 // socket to emit input-events to
+    socket,                // socket to emit input-events to
     say                   // function to broadcast to socket or player
   })
   .then(() => socket.emit('done'));
